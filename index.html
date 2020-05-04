@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Quote Replacer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
+    <script type="text/javascript" src="./script.js" defer></script>
+  </head>
+  <body>
+
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Quote Replacer
+          </h1>
+          <h2 class="subtitle">
+            Replace (fancy) quotes with others.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <form name="quoteform">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">From</label>
+                <div class="control">
+                  <label class="radio"><input type="radio" name="from" value="fancy"   > Fancy/smart/MacOS quotes (<code>“</code> <code>”</code>)</label><br/>
+                  <label class="radio"><input type="radio" name="from" value="double"  > Double quotes (<code>"</code>)</label><br/>
+                  <label class="radio"><input type="radio" name="from" value="single"  > Single quotes (<code>'</code>)</label><br/>
+                  <label class="radio"><input type="radio" name="from" value="backtick"> Backticks (<code>`</code>)</label><br/>
+                  <label class="radio"><input type="radio" name="from" value="french"  > French (<code>&laquo;</code> <code>&raquo;</code>)</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <label class="label">To</label>
+              <div class="control">
+                <label class="radio"><input type="radio" name="to" value="double"  > Double quotes (<code>"</code>)</label><br/>
+                <label class="radio"><input type="radio" name="to" value="single"  > Single quotes (<code>'</code>)</label><br/>
+                <label class="radio"><input type="radio" name="to" value="backtick"> Backticks (<code>`</code>)</label><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Paste your text here</label>
+                <div class="control">
+                  <textarea id="origin" class="textarea"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="field">
+                <label class="label">Result</label>
+                <div class="control">
+                  <textarea id="result" class="textarea"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <button class="button is-dark" type="submit">Replace</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Quote Replacer</strong> made out of frustration by <a href="https://richarddewit.dev">Richard de Wit</a>
+        </p>
+        <p>
+          Github: <a href="https://github.com/richarddewit">richarddewit</a><br />
+          Source code: <a href="https://github.com/richarddewit/quote-replacer">richarddewit/quote-replacer</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
