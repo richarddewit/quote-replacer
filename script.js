@@ -52,4 +52,23 @@
         var re = new RegExp("[" + quotes[from] + "]", "g");
         result.value = origin.value.replace(re, quotes[to]);
     }
+
+    document.getElementById("copy").addEventListener("click", function(e) {
+        e.preventDefault();
+        var btn = this;
+        var btnText = btn.innerText;
+        var width = btn.getBoundingClientRect().width;
+
+        btn.disabled = true;
+        btn.style.width = width + "px";
+        result.select();
+        document.execCommand("copy");
+        btn.innerText = "Copied!";
+
+        setTimeout(function() {
+            btn.disabled = false;
+            btn.innerText = btnText;
+            btn.removeAttribute("style");
+        }, 1000);
+    });
 })();
